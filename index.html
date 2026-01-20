@@ -1,7 +1,9 @@
+<!DOCTYPE html>
+<html><body style="background:black;color:lime;font:monospace;">
+<h1>🚀 LEVELGOD SENSI v1 @levelgodff</h1>
+<pre id="config">DPI 111 Aim 99% - Tap for Raw</pre>
 <script>
-async function load(k){
-  const u='https://pastebin.com/raw/'+k;
-  const r=await fetch(u,{mode:'no-cors'});
-  document.getElementById('out').textContent='SENSI '+k+' Loaded';
-}
+const raws=['MYgxzAYX','Mi8iygEd','1xG9srkG','SJnGqW5m'];
+raws.forEach(k=>fetch('https://pastebin.com/raw/'+k).then(r=>r.text()).then(t=>document.getElementById('config').textContent+=`\n${k}:\n${t.substring(0,100)}...`).catch(()=>{}));
 </script>
+</body></html>
