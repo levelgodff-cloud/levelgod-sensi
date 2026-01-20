@@ -1,0 +1,7 @@
+<script>
+async function load(k){
+  const u='https://pastebin.com/raw/'+k;
+  const r=await fetch(u,{mode:'no-cors'});
+  document.getElementById('out').textContent='SENSI '+k+' Loaded';
+}
+</script>
